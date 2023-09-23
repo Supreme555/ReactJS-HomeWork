@@ -9,8 +9,8 @@ const Home = () => {
             <PublicComp setZapis={setZapis} />
             {/* <VievComp zapisData={zapis} /> */}
             <div>
-                {zapisData.length ?
-                    zapisData.map(zapis => (
+                {zapis.length ?
+                    zapis.map(zapis => (
                         <VievComp key={zapis.id} zapis={zapis} />
                     ))
                     : <p>There are no cars</p>

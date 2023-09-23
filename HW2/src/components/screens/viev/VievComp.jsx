@@ -1,3 +1,4 @@
+import styles from './zapis.module.css'
 const Viev = ({ zapis }) => {
 
 
@@ -16,13 +17,13 @@ const Viev = ({ zapis }) => {
     //     )
     // }
     return (
-        <div>
+        <div className={styles.zapis}>
             {/* <button onClick={e => vievZapis(e)}>Viev</button> */}
             {
                 <div key={zapis.id} >
-                    <div> {zapis.zagolov}</div>
+                    <h2> {zapis.zagolov}</h2>
                     <div>
-                        <h2>{zapis.text}</h2>
+                        <p>{zapis.text}</p>
                         <p>{zapis.date}</p>
                     </div>
                 </div>
