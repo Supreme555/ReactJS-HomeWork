@@ -22,13 +22,13 @@ const Public = ({setZapis}) => {
             <form action="" className={styles.item}>
                 <input type="text" placeholder="Заголовок"
                     onChange={e => setData(prev => ({ ...prev, zagolov: e.target.value }))}
-                    value={data.name} />
+                    value={data.zagolov} />
                 <textarea type="text" placeholder="Основной текст"
                     onChange={e => setData(prev => ({ ...prev, text: e.target.value }))}
-                    value={data.name} ></textarea>
+                    value={data.text} ></textarea>
                 <input type="text" placeholder="Дата"
                     onChange={e => setData(prev => ({ ...prev, date: e.target.value }))}
-                    value={data.name} />
+                    value={data.date} />
                 <button onClick={e => createZapis(e)}>Create</button>
             </form>
         </div>
