@@ -9,11 +9,10 @@ const clearData = {
 
 const Public = ({setZapis}) => {
     const [data, setData] = useState(clearData)
-
     const createZapis = (e) => {
         e.preventDefault()
         setZapis(prev => [
-            { id: prev.length + 1, ...data }, ...prev])
+            { id: prev.length + 1, ...data, delete:false }, ...prev])
             console.log(data)
         setData(clearData)
     }
