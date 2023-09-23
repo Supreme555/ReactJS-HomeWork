@@ -1,0 +1,12 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.item input {
+    height: 50px;
+}
+.item textarea {
+    height: 60px;
+    margin: 20px 0;
+}
