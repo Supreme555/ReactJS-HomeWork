@@ -1,23 +1,8 @@
 import styles from './zapis.module.css'
 import { useState } from 'react'
-const Viev = ({ zapis }, { setZapis }) => {
-
-    function handleClick() {
-        const nextShapes = zapis.map((zap) => {
-            if (zapis.delete === true) {
-                // No change
-                return zapis;
-            } else {
-                // Return a new circle 50px below
-                return {
-                    ...zapis,
-                    delete: true,
-                };
-            }
-        });
-        // Re-render with the new array
-        setZapis(nextShapes);
-        console.log(zapis)
+const Viev = ({ zapis, setZapis }) => {
+    const Check =( ) => {
+        console.log(zapis.id)
     }
     return (
         <div>
@@ -28,8 +13,8 @@ const Viev = ({ zapis }, { setZapis }) => {
                     <div>
                         <p>{zapis.text}</p>
                         <p>{zapis.date}</p>
-                        <button onClick={handleClick}>Delete</button>
-                        {console.log(zapis.id)}
+                        <button onClick={(e) => { e.target }}
+                        >Delete</button>
                     </div>
                 </div>
             </div>
