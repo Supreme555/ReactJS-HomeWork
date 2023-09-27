@@ -5,7 +5,7 @@ const Viev = ({ zapis, setZapis }) => {
         console.log(id)
 
         setZapis((current) =>
-            current.filter((fruit) => fruit.id !== id)
+            current.filter((zapis) => zapis.id !== id)
         );
     }
     return (
