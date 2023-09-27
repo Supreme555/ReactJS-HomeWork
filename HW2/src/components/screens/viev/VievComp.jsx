@@ -1,8 +1,12 @@
 import styles from './zapis.module.css'
 import { useState } from 'react'
 const Viev = ({ zapis, setZapis }) => {
-    const Check =( ) => {
-        console.log(zapis.id)
+    const Check = (id) => {
+        console.log(id)
+
+        setZapis((current) =>
+            current.filter((fruit) => fruit.id !== id)
+        );
     }
     return (
         <div>
@@ -13,7 +17,7 @@ const Viev = ({ zapis, setZapis }) => {
                     <div>
                         <p>{zapis.text}</p>
                         <p>{zapis.date}</p>
-                        <button onClick={(e) => { e.target }}
+                        <button onClick={() => { Check(zapis.id) }}
                         >Delete</button>
                     </div>
                 </div>
@@ -22,18 +26,3 @@ const Viev = ({ zapis, setZapis }) => {
     )
 }
 export default Viev
-
-{/* <div className={styles.zapis}>
-            {active ? (
-                <div key={zapis.id} >
-                    <button onClick={() => setActive(false)}>Viev</button>
-                    <h2> {zapis.zagolov}</h2>
-                    <div>
-                        <p>{zapis.text}</p>
-                        <p>{zapis.date}</p>
-                    </div>
-                </div>
-            )
-                : (<button onClick={() => setActive(true)}>Viev</button>)
-            }
-        </div> */}
