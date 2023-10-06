@@ -1,39 +1,32 @@
+import Delete from '../delete/DeleteComp';
 import styles from './zapis.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 const Viev = ({ zapis, setZapis }) => {
-    const Check =( ) => {
-        console.log(zapis.id)
-    }
+    const [id, setList] = useState();
+    // console.log(zapis)
+    // const Delete = (id) => {
+    //     console.log(id)
+    //     setZapis(zapis.filter(obj => obj.id != id));
+    //     console.log(zapis)
+    // }
+    useEffect(() => {
+        console.log(id)
+        setZapis(zapis.filter(obj => obj.id != id));
+        console.log(zapis)
+    });
     return (
-        <div>
-            <div className={styles.zapis}>
-                <div key={zapis.id} >
-                    <p>{zapis.id}</p>
-                    <h2> {zapis.zagolov}</h2>
-                    <div>
-                        <p>{zapis.text}</p>
-                        <p>{zapis.date}</p>
-                        <button onClick={(e) => { e.target }}
-                        >Delete</button>
-                    </div>
+        <div className={styles.zapis}>
+            <div key={zapis.id} >
+                <p>{zapis.id}</p>
+                <h2> {zapis.zagolov}</h2>
+                <div>
+                    <p>{zapis.text}</p>
+                    <p>{zapis.date}</p>
                 </div>
             </div>
+            <button onClick={() => setList(zapis.id)}>Delete</button>
         </div>
     )
 }
 export default Viev
-
-{/* <div className={styles.zapis}>
-            {active ? (
-                <div key={zapis.id} >
-                    <button onClick={() => setActive(false)}>Viev</button>
-                    <h2> {zapis.zagolov}</h2>
-                    <div>
-                        <p>{zapis.text}</p>
-                        <p>{zapis.date}</p>
-                    </div>
-                </div>
-            )
-                : (<button onClick={() => setActive(true)}>Viev</button>)
-            }
-        </div> */}
