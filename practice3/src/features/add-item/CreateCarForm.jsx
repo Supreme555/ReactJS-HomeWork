@@ -11,31 +11,33 @@ const clearData = {
 
 const CreateCarForm = () => {
     const [data, setData] = useState(clearData)
-    const cars = useSelector((state) => state.addCar)
+    const cars = useSelector((state) => state.addCar.car)
     const dispatch = useDispatch()
 
     const createCar = (e) => {
         e.preventDefault()
-        // console.log(cars)
         dispatch(addCar(data))
+        console.log(cars)
         setData(clearData)
     }
 
 
     return (
-        <form className={styles.form}>
-            <input type="text" placeholder='Name'
-                onChange={e => setData(prev => ({ ...prev, name: e.target.value }))}
-                value={data.name} />
-            <input type="text" placeholder='Price'
-                onChange={e => setData(prev => ({ ...prev, price: e.target.value }))}
-                value={data.price} />
-            <input type="text" placeholder='Image'
-                onChange={e => setData(prev => ({ ...prev, image: e.target.value }))}
-                value={data.image} />
+        <div>
+            <form className={styles.form}>
+                <input type="text" placeholder='Name'
+                    onChange={e => setData(prev => ({ ...prev, name: e.target.value }))}
+                    value={data.name} />
+                <input type="text" placeholder='Price'
+                    onChange={e => setData(prev => ({ ...prev, price: e.target.value }))}
+                    value={data.price} />
+                <input type="text" placeholder='Image'
+                    onChange={e => setData(prev => ({ ...prev, image: e.target.value }))}
+                    value={data.image} />
 
-            <button onClick={e => createCar(e)}>Create</button>
-        </form>
+                <button onClick={e => createCar(e)}>Create</button>
+            </form>
+        </div>
     )
 }
 

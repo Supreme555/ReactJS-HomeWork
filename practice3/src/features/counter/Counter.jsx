@@ -6,11 +6,10 @@ import { decrement, increment, incrementByAmount } from './counterSlice'
 export function Counter() {
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
-  const state = useSelector((state) => state)
+  // const state = useSelector((state) => state)
   // console.log(state)
   const [per, setPer] = useState('fghj')
   const Check = () => {
-    // console.log(per)
     dispatch(incrementByAmount(per))
   }
   return (

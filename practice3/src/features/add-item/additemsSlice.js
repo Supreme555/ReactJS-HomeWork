@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { cars as carsData } from '../../../public/cars.data'
+import { useState } from 'react'
 
 const initialState = {
-    cars: carsData,
+    car: carsData,
     value: 0,
 }
 
@@ -12,8 +13,10 @@ export const additemsSlice = createSlice({
     reducers: {
         addCar: (state, action) => {
             let data = action.payload
-            console.log(state.cars)
-            state.cars(prev => [{ id: prev.length + 1, ...data }, ...prev])
+            let l = state.car.length
+            const setState = state.car
+            setState(prev => [
+                { id: prev.length + 1, ...data }, ...prev])
         },
     },
 })
