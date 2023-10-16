@@ -14,9 +14,7 @@ export const additemsSlice = createSlice({
         addCar: (state, action) => {
             let data = action.payload
             let l = state.car.length
-            const setState = state.car
-            setState(prev => [
-                { id: prev.length + 1, ...data }, ...prev])
+            state.car = [{ id: l + 1, ...data }, ...carsData]
         },
     },
 })
