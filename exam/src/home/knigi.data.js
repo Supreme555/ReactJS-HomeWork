@@ -1,6 +1,7 @@
 export const knigi = [
     {
         id: 0,
+        isEdit: false,
         name: 'Сад',
         avtor: 'Лермонтов',
         date: '20.07.2009',
@@ -8,6 +9,7 @@ export const knigi = [
     },
     {
         id: 1,
+        isEdit: false,
         name: 'Пихта',
         avtor: 'Пушкин',
         date: '17.02.2012',
@@ -15,6 +17,7 @@ export const knigi = [
     },
     {
         id: 2,
+        isEdit: false,
         name: 'Город',
         avtor: 'Толстов',
         date: '01.10.2015',

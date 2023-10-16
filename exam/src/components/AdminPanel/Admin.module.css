@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(41, 40, 40);
+    font-family: sans-serif;
+}
+.form {
+    margin: 10px auto 30px;
+    display: flex;
+    flex-direction: column;
+}
+.vivod {
+    margin: 10px auto 30px;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 250px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+}
+input:focus {
+    border-color: blue;
+}
+button {
+    margin: 10px 0;
+    padding: 5px 10px;
+    width: 273px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+button:hover {
+    background-color: gray;
+}
+main {
+    margin-left: 30px;
+}
+h2 {
+    color: purple;
+}
+p {
+    color: purple;
+}
+.book {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid purple;
+    width: 303px;
+}
+.book_text {
+    width: 90%;
+}
+span {
+    color: purple;
+}
